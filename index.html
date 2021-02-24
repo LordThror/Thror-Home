@@ -10,169 +10,243 @@
 	 body {
     max-width: 100%;
     overflow-x:hidden;
-	 background:navy;  
     color:white;  
     font-family:sans-serif; 
-    }    
+    background:navy;
+    }   
         
     a {
       color:white;    
     }
         
     #banner {
-      margin:-10px;
       background:blue;
-      padding-bottom:20px;
-		padding-top:20px;
-		text-align:CENTER; 
-    }
-    
-    button {
-      background:blue;
-      color:white;
-      border:0px solid blue;
-    }   
+      padding-bottom:10px;
+		padding-top:10px;
+		text-align:CENTER;   
+		box-shadow:10px 10px 8px black;
+		position:fixed; 
+		width:100%; 
+		margin:-10px; 
+		margin-top:-50px;
+		z-index:100; 
+		border-bottom:5px solid white;
+    } 
       
     img {
       border-radius:15px; 
-      margin:10px;    
+      margin:10px;   
+		box-shadow:10px 10px 8px black;
     }
         
     #me-img {
       margin-top:50px;   
-      margin-left:80px;    
+      margin-left:25px;  
+		width:500px; 
     }    
        
     h1 {
     margin:5px;    
     }
-        
-    hr {
-    margin:5px; 
-    color:white;
-    } 
 		 
     .channel-text {
 	  padding-bottom:70px;	 
+	  margin:10px;	 
 	 }
         
     #intro {
       position:absolute;
-      margin-top:-420px;
+      margin-top:-530px;
       margin-left:600px;
 		margin-right:20px; 
 		padding-left:5px; 
 		border:5px solid white;
 		background:blue;
 		border-radius:15px; 
+		box-shadow:10px 10px 8px black;
     } 
         
     .title {
-      margin-left:-20px;
-		margin-right:-20px;
-		margin-top:5px;
-		margin-bottom:5px; 
+		width:98%;
+		margin-left:1%; 
+		margin-right:1%;
+		margin-top:20px;
+		margin-bottom:20px; 
       background:blue;
       text-align:CENTER; 
-      font-size:100px;
+      font-size:50px;
 		border:5px solid white;
+		border-radius:15px;
+		box-shadow:10px 10px 8px black;
     } 
-        
-     iframe{
-     margin:20px;
-     width:600px;
-     height:400px;
-     }
         
      .channel {
      border-radius:50%;  
      float:left; 
-     width:150px; 
+     width:150px;
+	  height:150px;
+	  box-shadow:5px 5px 4px black;
+	  margin:5px;
+	  animation:0.1s linear reduce;
      }
         
+	  .channel:hover {
+		  box-shadow:5px 5px 4px black;
+		  animation:0.1s linear shadow-grow;
+		  box-shadow:10px 10px 8px black; 
+		  margin:10px;
+		  border-radius:15%;
+		}
+		 
 	  #bottom { 
 		margin-left:-20px;
 		margin-right:-20px;
-		margin-top:5px;
-		margin-bottom:5px;
+		margin-top:15px;
+		padding-bottom:10px;
+		margin-bottom:-20px;  
 		background:blue;
 		color:white;
 		text-align:center;
-		border:5px solid white;
-		border-radius:15px;
-		  
+		border-top:5px solid white;
 	  }
 		 
-	  #entry{
-	   margin:10px;
+	  .boys-panel {
+	   width:96%;
+		margin-left:2%; 
+		margin-right:2%;
+		margin-top:20px;
+		margin-bottom:5px;
 		background:blue;
 		color:white;
 		border:5px solid white;
 		border-radius:15px;  
+		box-shadow:10px 10px 8px black;
+	  }
+		 
+	 #back {
+	  position:fixed;
+	  z-index:101; 
+	  margin-top:-40px;	 
+    }
+		 
+	 #news-panel-left {
+		width:46%;
+		margin-left:2%; 
+		margin-right:52%;
+		margin-top:20px;
+		margin-bottom:5px;
+		background:blue;
+		color:white;
+		border:5px solid white;
+		border-radius:15px;  
+		box-shadow:10px 10px 8px black; 
+		
+	  }
+		 
+	  #news-panel-right {
+		width:46%;
+		margin-left:50%; 
+		margin-right:4%;
+		margin-top:0px;
+		margin-bottom:5px;
+		background:blue;
+		color:white;
+		border:5px solid white;
+		border-radius:15px;  
+		box-shadow:10px 10px 8px black; 
+		position:absolute; 
+		 
+	  }
+		 
+	  #news-div {
+		 padding-bottom:20px;
+	  }
+		 
+	  .news-text {
+		margin:10px;  
 	  }
         
     @keyframes fade-in {
         from {opacity: 0;}
         to {opacity: 1;}
-    }    
+    }   
+		 
+	@keyframes shadow-grow {
+		from {box-shadow:5px 5px 4px black; margin:5px; border-radius:50%;}
+		to { box-shadow:10px 10px 8px black; margin:10px; border-radius:15%;}
+		 }
+		 
+	@keyframes reduce {
+		from {box-shadow:10px 10px 8px black; margin:10px; border-radius:15%;}
+		to { box-shadow:5px 5px 4px black; margin:5px; border-radius:50%;}
+		 }
     </style>
     
     <body>
     
-    <div id="banner">
+	 <div id="banner">
       <a href="games.html"><strong>Games</strong></a>
       <a href="youtube.html"><strong>Youtube</strong></a>
       <a href="https://lordthror.github.io/Dreamlands-Official-Guide/" target="_blank"><strong>Dreamlands Guide</strong></a>
-    </div>
-    
-    <figure id="me-img">    
-    <img id="me"> 
-    <figcaption>Image by <a href="https://scratch.mit.edu/users/mister_dazzling/">@mister_dazzling</a>           </figcaption>    
+		</div> 	 
+
+	 <a href="#me-img" id="back"><strong>Back to Top</strong></a>
+	 
+		 
+    <figure id="me-img" >    
+    <img src="https://i.ibb.co/TBBMvpm/thror.png" alt="thror" id="me-img">
     </figure>    
     
     <div id="intro">
-    <h1><strong>Hi There!</strong></h1> <br>
-    <p style="margin-top:2px;">I'm a website developer (I know Java, HTML, and CSS) and a game programmer on the popular block-based coding site <a href="https://scratch.mit.edu/Scratch">Scratch</a>. In my spare time I enjoy writing stories, playing basketball, creating YouTube videos, playing strategy board games, and hanging out with my buddies!</p> 
+    <h1><strong>About Me</strong></h1> <br>
+    <p style="margin-top:2px;">I'm a rookie website developer (I know JavaScript, HTML, and CSS) and a game programmer on the popular block-based coding site <a href="https://scratch.mit.edu/">Scratch</a>. I also enjoy writing stories and world-building, which I try to incorporate into my games when I can, as well as playing strategy board games like Catan, Pandemic, and Chess, which I sadly always lose. Anyways, you can check out what I'm up to by scrolling down below to the news section, or you can check out some other cool people by scrolling down below that! If you want to see more specifically what I create, you can click some of the links on the banner on the top! Thanks for visiting :D !</p> 
     </div> 
 		 
-     <h1 class="title">Youtube</h1>       
-	    <p>This section moved to the <a href="youtube.html">YouTube page</a> (<a href="#banner">Banner</a> on the top)</p>	 
-	  
-     <h1 class="title">Dreamlands</h1>
-        <p>Dreamlands is a game I am making on Scratch. Only the Beta is out now, with the full version coming out soon. Be sure to check out the <a href="https://lordthror.github.io/Dreamlands-Official-Guide/">wiki</a>.</p>
+		 <div id="intro" style="margin-top:-250px;">
+    <h1><strong>Me In Other Places</strong></h1> <br>
+    <p style="margin-top:2px;">I have a <a href="https://www.pixilart.com/thror">pixilart account</a>. Let's see, my <a href="https://scratch.mit.edu/users/LordThror/">Scratch account</a>, and you can read a story I wrote <a href="https://drive.google.com/drive/folders/1I9NAls8BnWmmsMYX8QjqlaIdnYFavVHN">here</a>. If you want, you can check out all three using my Resite <a href="https://resite.link/Erosion">link</a>!</p> 
+    </div> 
         
-     <iframe style = "margin-top:10px;" src="https://scratch.mit.edu/projects/412742768/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
-      
-      <h1 class="title">The Bois</h1>
-      <p>These are some underrated people you should check out on Scratch. Definitly check out Thintin and EpicBro90.</p> 
-     
-     <div id="entry"> <a href="https://scratch.mit.edu/users/-Zoinks-/" target="_blank"><img class="channel" src="https://cdn2.scratch.mit.edu/get_image/user/40165025_60x60.png" style="margin-bottom:50px;"> <h1>-Zoinks-</h1></a> <p class="channel-text">-Zoinks- is an amazing vector artist and game programmer. He placed in Vincrafts Game Jam, and also happens to be an even more incredible animator then he is game programmer. He's working on an RPG that sounds very promising.</p> </div>
-        
-     <div id="entry"> <a href="https://scratch.mit.edu/users/Thintin/" target="_blank"><img class="channel" src="https://i.ibb.co/Ms3HXBT/34519902.gif"> <h1>Thintin</h1></a> <p class="channel-text">Thintin is an absolutly incredible RPG maker and pixel artist! Seriously, without hesitating I can say he is the most underrated person on Scratch. If you check any of these people out here check him and play Moonfall Mage and Raven Tale.</p> </div>
-        
-     <div id="entry"> <a href="https://scratch.mit.edu/users/Epicbro90/" target="_blank"><img class="channel" src="https://uploads.scratch.mit.edu/projects/thumbnails/421639629.png" style="height:150px;"> <h1>EpicBro90</h1></a> <p class="channel-text">EpicBro90 is probably the second most underrated person here. He is also probably the best vector artist on Scratch. His graphics and art blow my mind, and his programming is pretty incredible too. Defnitly go to his profile and click the blue button.</p></div>
-        
-     <div id="entry"> <a href="https://scratch.mit.edu/users/mister_dazzling/" target="_blank"><img class="channel" src="https://uploads.scratch.mit.edu/users/avatars/52459479.png"> <h1>mister_dazzling</h1></a> <p class="channel-text">mister_dazzling is a very talented animator and creative story teller. His talents shine in the Exterra War and Scratch Court Case, and he doesn't limit his creativity to animations. He also has programmed a few RPGs, including Phantasie World.</p></div>
-        
-     <div id="entry"> <a href="https://scratch.mit.edu/users/RendHeaven/" target="_blank"><img class="channel" src="https://uploads.scratch.mit.edu/users/avatars/24709165.png"> <h1>RendHeaven</h1></a> <p class="channel-text">RendHeaven is a Scratch veteran of 10 years, and his ultimate talents are in his game design and cloud programming. Most of his projects have hit top-loved, though he has only shared four. He values strategic gameplay and his games have spawned an entire community on Scratch.</p></div>
-      
-     <div id="entry"> <a href="https://scratch.mit.edu/users/DawsonStudios/" target="_blank"><img class="channel" src="https://uploads.scratch.mit.edu/users/avatars/62317983.png"> <h1>DawsonStudios</h1></a> <p class="channel-text">DawsonStudios is a cloud programmer, unfortunatly much underrated, and has worked on many collaboration projects. He loves fishing and hunting and many of his projects relect this. He has recently released a long time project, Battlefront.io WORLD and is currently working on collaborative projects.</p> </div>
+     <h1 class="title" style="fonst-size:50px;">News</h1>
 		 
-		 <div id="entry"> <a href="https://scratch.mit.edu/users/smorrebrot/" target="_blank"><img class="channel" src="https://cdn2.scratch.mit.edu/get_image/user/30377605_60x60.png"> <h1>smorrebrot</h1></a> <p class="channel-text">Smorrebrot is an amazing programmer and vector artist. Most of his games are hack n' slash battlers, pitting yourself against waves of monsters. His crown jewel is probably his Tadek series (Tadek, Tadek 2, Tadek Tactics etc.).</p> </div>
+  <div id="news-div">
+	  
+<div id="news-panel-right"> 
+		  <h1><em>Dreamtale: Order</em> Reflections</h1>
+	<img src="https://cdn2.scratch.mit.edu/get_image/project/465001430_288x216.png"> 
+   <p class="news-text"><a href="https://scratch.mit.edu/projects/465001430/" target="_blank">Dreamtale: Order</a> is the final edition of Dreamlands, besides probably some updates. I'd like to add some more sound effects and of course fix any bugs that players might encounter. I've dedicated a lot of my time to this project, and though it may not be perfect, I feel that I've accomplished something. When I started out making Dreamlands with mental images of Dreams and Nightmares, I thouhgt I was just going to make a quick, simple, casual RPG. It didn't turn out that way. What started as a quick maybe a month long at most project turned into a multiple month project. Some of this is due to a draining of my motivation at times and some real life complications like school and growing up, but I kept at it. And now I've finished it. <br><br> I'm not sure what projects I'll make after this. I really like the whole "world of dreams" concept I've come up with, and I'd like to expand that world. Perhaps make a completly open world project based on it, but that's really all dreaming. For now, I think I'll sit back and make some updates to <em>The Dead of Winter</em>, which has really the same background story as <em>Dreamtale: Order</em>. I've gotten mostly positive feedback on it, except that it's too easy and repetive, which I aim to fix with additional monsters, a boss, and some secrets...<br><br> - Thror </p>
+	  </div>
+	  <div id="news-panel-left"> 
+		  <h1>My Favorite Pixel Art</h1> 
+		  <img src="https://art.pixilart.com/0bd24bb89bbc75a.png" width="300px"> 
+		  <img src="https://art.pixilart.com/b53fe188990f390.png" width="300px">
+		  <img src="https://art.pixilart.com/b7b83b3c3e9a2f4.png" width="300px">
+		  </div>
+</div>	  
+		 
+      <div class="title"><h1>The Boys</h1>
+      <p style="font-size:20px;">These are some underrated people you should check out on Scratch. Definitly check out Thintin and EpicBro90.</p> </div>
+     
+     <div class="boys-panel"> <a href="https://scratch.mit.edu/users/-Zoinks-/" target="_blank"><img class="channel" src="https://cdn2.scratch.mit.edu/get_image/user/40165025_60x60.png"> <h1>-Zoinks-</h1></a> <p class="channel-text">-Zoinks- is an amazing vector artist and game programmer. He placed in Vincrafts Game Jam, and also happens to be an even more incredible animator then he is game programmer. He's working on an RPG that sounds very promising.</p> </div>
+        
+     <div class="boys-panel"> <a href="https://scratch.mit.edu/users/Thintin/" target="_blank"><img class="channel" src="https://i.ibb.co/Ms3HXBT/34519902.gif"> <h1>Thintin</h1></a> <p class="channel-text">Thintin is an absolutly incredible RPG maker and pixel artist! Seriously, without hesitating I can say he is the most underrated person on Scratch. If you are going to check any of these people, check out him, and play <em>Moonfall Mage</em> and <em>Raven Tale</em>.</p></div>
+        
+     <div class="boys-panel"> <a href="https://scratch.mit.edu/users/Epicbro90/" target="_blank"><img class="channel" src="https://uploads.scratch.mit.edu/projects/thumbnails/421639629.png"> <h1>EpicBro90</h1></a> <p class="channel-text">EpicBro90 is probably the second most underrated person here. He is also probably the best vector artist on Scratch. His graphics and art blow my mind, and his programming is pretty incredible too. Definitly go to his profile and click the blue button.</p></div>
+        
+     <div class="boys-panel"> <a href="https://scratch.mit.edu/users/mister_dazzling/" target="_blank"><img class="channel" src="https://uploads.scratch.mit.edu/users/avatars/52459479.png"> <h1>mister_dazzling</h1></a> <p class="channel-text">mister_dazzling is a very talented animator and creative story teller. His talents shine in the <em>Exterra War</em> and <em>Scratch Court Case</em>, and he doesn't limit his creativity to animations. He also has programmed a few RPGs, including <em>Phantasie World</em>.</p></div>
+        
+     <div class="boys-panel"> <a href="https://scratch.mit.edu/users/RendHeaven/" target="_blank"><img class="channel" src="https://uploads.scratch.mit.edu/users/avatars/24709165.png"> <h1>RendHeaven</h1></a> <p class="channel-text">RendHeaven is a Scratch veteran of 10 years, and his ultimate talents are in his game design and cloud programming. Most of his projects have hit top-loved, though he has only shared four. He values strategic gameplay and his games have spawned an entire community on Scratch. He has since left, but his games are still masterpieces.</p></div>
+      
+     <div class="boys-panel"> <a href="https://scratch.mit.edu/users/DawsonStudios/" target="_blank"><img class="channel" src="https://uploads.scratch.mit.edu/users/avatars/62317983.png" style="background:black;"> <h1>DawsonStudios</h1></a> <p class="channel-text">DawsonStudios is a cloud programmer, unfortunatly much underrated, and has worked on many collaboration projects. He loves fishing and hunting and many of his projects relect this. He has recently released a long time project, <em>Battlefront.io WORLD</em> and is currently working on collaborative projects.</p> </div>
+		 
+		 <div class="boys-panel"> <a href="https://scratch.mit.edu/users/smorrebrot/" target="_blank"><img class="channel" src="https://cdn2.scratch.mit.edu/get_image/user/30377605_60x60.png" style="background:white;"> <h1>smorrebrot</h1></a> <p class="channel-text">Smorrebrot is an amazing programmer and vector artist. Most of his games are hack n' slash battlers, pitting yourself against waves of monsters. His crown jewel is probably his <em>Tadek</em> series (<em>Tadek, Tadek 2, Tadek Tactics</em> etc.).</p> </div>
     
         <div id="bottom">    
         <h1 style="font-size:100px;">Contact Me</h1> 
         <p>You can contact me on YouTube <a href="https://www.youtube.com/channel/UCILwvl86yaahYhrvJ8sj6ZQ">here</a>.</p>    
         <p>You can contact me on Pixilart <a href="https://www.pixilart.com/thror">here</a>.</p>
         <p>You can contact me on Scratch <a href="https://scratch.mit.edu/users/LordThror/">here</a>.</p> 
-		  <p id="update">Updated 28/02/2021.</p>
-		  <p id="update">This site uses <a href="https://jquery.com/">jQuery</a>.</p>
+		  <p id="update">Updated 27/02/2021.</p>
         </div>    
-</body>
-    
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-  $("#me").css("opacity", "0").attr("src", "https://u.cubeupload.com/Thror/scratchPFP.png").css("animation", "fade-in 2s linear").css("opacity","1");
-  $("#intro").css("opacity", "0").css("animation", "fade-in 2s linear").css("opacity","1");
-  </script>
+	</body>
 </html>
